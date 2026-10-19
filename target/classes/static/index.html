@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contract Grammar Workbench</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main>
+  <header>
+    <p class="eyebrow">CFG-ASSISTED DRAFTING</p>
+    <h1>Contract Grammar Workbench</h1>
+    <p class="intro">Draft a clause, validate its formal structure, and inspect the grammar version used.</p>
+  </header>
+
+  <section class="notice">
+    <strong>Prototype notice:</strong> Grammar acceptance is a structural check only. It is not legal advice,
+    does not guarantee enforceability, and requires review by a qualified legal professional.
+  </section>
+
+  <section class="workspace">
+    <div class="card editor-card">
+      <label for="clause">Plain-English clause</label>
+      <textarea id="clause" spellcheck="true">the provider shall deliver the service</textarea>
+      <div id="highlight" class="highlight" aria-live="polite"></div>
+      <p class="hint">Try: <code>the client shall pay the fee</code></p>
+    </div>
+    <div class="card result-card">
+      <div class="result-heading">
+        <h2>Validation</h2><span id="version" class="badge">Grammar v1</span>
+      </div>
+      <p id="status" class="status">Type a clause to validate it.</p>
+      <ul id="diagnostics"></ul>
+      <h3>Grammar history</h3>
+      <ul id="history" class="history"></ul>
+    </div>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
